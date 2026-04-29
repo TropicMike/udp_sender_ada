@@ -1,0 +1,15 @@
+name = "udp_sender"
+description = ""
+version = "0.1.0-dev"
+
+authors = ["Junk"]
+maintainers = ["Junk <example@example.com>"]
+maintainers-logins = ["Junk"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []
+
+executables = ["udp_sender"]
+
+[[depends-on]]
+gnoga = "^2.1.2"
