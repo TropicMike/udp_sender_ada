@@ -144,7 +144,9 @@ begin
    Main_View.Create (Parent => Main_Window);
    Main_View.Style ("cssText", Container_CSS);
 
-   Main_View.Put_HTML (HTML => "<h2 style='margin-top:0;color:#333'>UDP Sender</h2>");
+   Main_View.Put_HTML
+     (HTML => "<h2 style='margin-top:0;color:#333'>" &
+              "UDP Sender</h2>");
 
    Form.Create (Parent => Main_View);
 
