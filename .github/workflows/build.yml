@@ -1,0 +1,25 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: alire-project/setup-alire@v3
+
+      - run: alr build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: udp_sender-${{ matrix.os }}
+          path: bin/
