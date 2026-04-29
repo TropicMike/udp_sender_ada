@@ -15,9 +15,17 @@ project Udp_Sender is
       for Switches ("Ada") use ("-Es"); --  Symbolic traceback
    end Binder;
 
+   type OS_Kind is ("Windows_NT", "Unix");
+   OS : OS_Kind := external ("OS", "Unix");
+
    package Linker is
-      for Switches ("Ada") use
-        ("-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib");
+      case OS is
+         when "Unix" =>
+            for Switches ("Ada") use
+              ("-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib");
+         when "Windows_NT" =>
+            null;
+      end case;
    end Linker;
 
    package Install is
