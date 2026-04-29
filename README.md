@@ -18,13 +18,7 @@ A cross-platform GUI application for sending UDP strings, written in Ada using t
 - [Alire](https://alire.ada.dev/) (Ada package manager)
 - GNAT compiler (installed automatically by Alire)
 
-### macOS
-
-The project file includes a linker path for the macOS SDK. If your SDK is in a non-default location, update the `Linker` package in `udp_sender.gpr`.
-
-### Windows
-
-Remove or comment out the `Linker` package in `udp_sender.gpr` — the macOS SDK path is not needed on Windows.
+The project file auto-detects the platform using the `OS` environment variable and only includes the macOS SDK linker path on non-Windows systems. If your macOS SDK is in a non-default location, update the `Linker` package in `udp_sender.gpr`.
 
 ## Build
 
