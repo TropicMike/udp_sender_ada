@@ -20,6 +20,10 @@ jobs:
         with:
           version: 2.1.0
 
+      - name: Install system dependencies (macOS)
+        if: runner.os == 'macOS'
+        run: arch -arm64 brew install unixodbc gnutls
+
       - run: alr build
 
       - uses: actions/upload-artifact@v5
