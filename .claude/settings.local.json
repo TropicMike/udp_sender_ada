@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gnatls -v)",
+      "Bash(locate gnat-sockets.ads)",
+      "Bash(cp /Users/mikesa/.local/share/alire/releases/gnoga_2.1.2_5f127c56/templates/gnoga_make/singleton/js/boot.js /Users/mikesa/t/udp_sender/js/)",
+      "Bash(cp /Users/mikesa/.local/share/alire/releases/gnoga_2.1.2_5f127c56/templates/gnoga_make/singleton/js/jquery.min.js /Users/mikesa/t/udp_sender/js/)",
+      "Bash(cp /Users/mikesa/.local/share/alire/releases/gnoga_2.1.2_5f127c56/templates/gnoga_make/singleton/html/boot.html /Users/mikesa/t/udp_sender/html/)"
+    ]
+  }
+}
