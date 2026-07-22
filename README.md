@@ -4,7 +4,6 @@ A cross-platform GUI application for sending UDP strings, written in Ada using t
 
 ![Ada](https://img.shields.io/badge/Ada-2012-blue)
 ![License](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-green)
-![Build](https://github.com/TropicMike/udp-sender-ada/actions/workflows/build.yml/badge.svg)
 
 ## Features
 
@@ -57,10 +56,6 @@ udp_sender/
   udp_sender.gpr       -- GPR project file
   alire.toml            -- Alire manifest
 ```
-
-## CI
-
-GitHub Actions builds the project on both macOS and Windows on every push and pull request to `main`. Build artifacts (the compiled binary) are available for download from each workflow run.
 
 ## License
 
